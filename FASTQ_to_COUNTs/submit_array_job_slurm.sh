@@ -8,5 +8,5 @@
 
 echo "starting task id $SLURM_ARRAY_TASK_ID"
 
-./STAR_PE_WORK.sh $SLURM_ARRAY_TASK_ID
+./STAR_alignment_SE.sh $SLURM_ARRAY_TASK_ID
 
