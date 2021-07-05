@@ -15,5 +15,8 @@ These scripts were developed on a HPC with a [SLURM scheduler](https://slurm.sch
 >* this [script](FASTQ_to_COUNTs/3_PE_count_reads.sh) counts the reads and creates the input matrix for subsequent analysis with DESeq2 or voom limma. 
 
 ## Analysis of RNAseq count matrix  
+The [DESeq2](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-014-0550-8) analysis pipeline does not require a lot of coding effort. It is couple of R-commands from data ingest to differential gene expression results. Thus, this [script](analyseCOUNTs/DESeq2/deseq_differential_expression.R) also includes initial data wrangling to get the data in shape for the DESeq2 data object and conversion of EntrezIDs to NCBI Symbol. You can use the vst matrix in case you want to do analyse the data outside of DESeq2.  
+<br/><br/> 
+The [limma voom](https://genomebiology.biomedcentral.com/articles/10.1186/gb-2014-15-2-r29) analysis pipeline
 
 ## Miscellaneous
