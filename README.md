@@ -16,7 +16,7 @@ These scripts were developed on a HPC with a [SLURM scheduler](https://slurm.sch
 
 ## Analysis of RNAseq count matrix  
 The [DESeq2](https://genomebiology.biomedcentral.com/articles/10.1186/s13059-014-0550-8) analysis pipeline does not require a lot of coding effort. It is couple of R-commands from data ingest to differential gene expression results. Thus, this [script](analyseCOUNTs/DESeq2/deseq_differential_expression.R) also includes initial data wrangling to get the data in shape for the DESeq2 data object and conversion of EntrezIDs to NCBI Symbol. You can use the vst matrix in case you want to do analyse the data outside of DESeq2.  
-<br/><br/> 
-The [limma voom](https://genomebiology.biomedcentral.com/articles/10.1186/gb-2014-15-2-r29) analysis pipeline
+<br/>
+The [limma voom](https://genomebiology.biomedcentral.com/articles/10.1186/gb-2014-15-2-r29) analysis pipeline as implemented in this [scirpt](analyseCOUNTs/limma_voom/voom_incl_batch_removal.R) includes several QC plots to find outlying patterns in your count data and a batch removal procedure of a known batches in the dataset. It includes setting up a design and a contrast matrix for more multifacetted datasets alongside with a wrapper to convert from EntrezID to Gene Symbol and export differential gene expression results.
 
 ## Miscellaneous
