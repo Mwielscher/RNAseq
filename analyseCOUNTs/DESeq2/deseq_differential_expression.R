@@ -18,8 +18,7 @@ samp1=samp1[as.character(colnames(dat)),]
 samp_read=colSums(dat)
 table(samp_read < 2000000)
 dat=dat[,!samp_read < 2000000 ]
-## ------------  also kick out PCA outlier and possible SWOPS
-#swops=c("GM_Donor_1_S71937","IL2_Donor_12_S71899","IL2_Donor_4_S71910")
+## ------------  also kick out PCA outlier 
 outlier=c("IL2_Donor_16_S71943")
 dat=dat[,!colnames(dat) %in% c(outlier) ]
 ## -----------------  for now kick out JANA samples and outlier
